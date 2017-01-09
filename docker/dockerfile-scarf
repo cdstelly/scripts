@@ -1,0 +1,23 @@
+FROM golang:1.6
+MAINTAINER Christopher Stelly <cdstelly@gmail.com>
+
+# Copy the local package files to the container's workspace.
+ADD bin/consumer /go/bin/consumer
+ADD bin/broker /go/bin/broker
+
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends \
+        libmagic-dev
+
+# install dependencies
+RUN go get github.com/rakyll/magicmime
+RUN go get gopkg.in/olivere/elastic.v5
+RUN go get github.com/Shopify/sarama
+RUN go get github.com/Sirupsen/logrus
+RUN go get github.com/gogo/protobuf/proto
+RUN go get github.com/pierrec/lz4
+
+##RUN go install consumer
+##RUN go install broker
+
+# Run the outyet command by default when the container starts.
