@@ -1,0 +1,5 @@
+  433  docker pull logicalspark/docker-tikaserver
+  434  docker run -d -p 9998:9998 logicalspark/docker-tikaserver
+  438  curl http://localhost:9998/
+  440  time nc 127.0.0.1 9998 < hd.pdf
+  441  curl -X PUT --data-binary @hd.pdf http://localhost:9998/tika --header "Content-type: application/pdf"
