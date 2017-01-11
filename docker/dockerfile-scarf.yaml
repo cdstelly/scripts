@@ -6,10 +6,9 @@ ADD bin/consumer /go/bin/consumer
 ADD bin/broker /go/bin/broker
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends \
-        libmagic-dev
 
 # install dependencies
+RUN apt-get install -y --no-install-recommends libmagic-dev
 RUN go get github.com/rakyll/magicmime
 RUN go get gopkg.in/olivere/elastic.v5
 RUN go get github.com/Shopify/sarama
