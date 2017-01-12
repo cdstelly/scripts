@@ -8,3 +8,11 @@ to install docker-machine
  curl -L https://github.com/docker/machine/releases/download/v0.9.0-rc2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
   chmod +x /tmp/docker-machine &&
   sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+
+# to run docker-compose with docker swarm,
+# see https://github.com/ddrozdov/docker-compose-swarm-mode
+$ sudo pip install docker-compose-swarm-mode
+
+followed by
+$ docker-compose-swarm-mode -f docker-compose.yaml up
