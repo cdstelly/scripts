@@ -1,0 +1,9 @@
+#SSH into each node, 
+docker swarm leave
+
+#on the master
+docker node ls
+for each: 
+  docker node rm <id>
+
+docker swarm leave --force
