@@ -1,0 +1,53 @@
+# reference https://hub.docker.com/r/itzg/elasticsearch/ 12 Jan 2017
+
+version: '2'
+
+services:
+  gateway:
+    image: itzg/elasticsearch
+    environment:
+      UNICAST_HOSTS: trex0:9300,trex1:9300,trex2:9300,trex3:9300
+      TYPE: GATEWAY
+      ES_JAVA_OPTS: "-Xms10g -Xmx10g"
+    ports:
+      - "9200:9200"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 262144
+        hard: 262144
+    cap_add:
+        - IPC_LOCK
+  master:
+    image: itzg/elasticsearch
+    environment:
+      UNICAST_HOSTS: trex0:9300,trex1:9300,trex2:9300,trex3:9300
+      TYPE: MASTER
+      MIN_MASTERS: 2
+      ES_JAVA_OPTS: "-Xms10g -Xmx10g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 262144
+        hard: 262144
+    cap_add:
+        - IPC_LOCK
+  data:
+    image: itzg/elasticsearch
+    environment:
+      UNICAST_HOSTS: trex0:9300,trex1:9300,trex2:9300,trex3:9300
+      TYPE: DATA
+      ES_JAVA_OPTS: "-Xms30g -Xmx30g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 262144
+        hard: 262144
+    cap_add:
+        - IPC_LOCK
