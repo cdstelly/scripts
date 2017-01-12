@@ -16,3 +16,16 @@ $ sudo pip install docker-compose-swarm-mode
 
 followed by
 $ docker-compose-swarm-mode -f docker-compose.yaml up
+
+
+# to scale
+# reference https://docs.docker.com/engine/swarm/swarm-tutorial/scale-service/
+docker service scale <service-name>=5
+# example
+cstelly@tt:~/es-swarm>docker service ls
+ID            NAME              REPLICAS  IMAGE               COMMAND
+2qfzgjvkfndh  es-swarm_gateway  1/1       itzg/elasticsearch
+b2i37rm4uxig  es-swarm_master   1/1       itzg/elasticsearch
+by4xpbigprqh  es-swarm_data     1/1       itzg/elasticsearch
+cstelly@tt:~/es-swarm>docker service scale es-swarm_data=3
+es-swarm_data scaled to 3
