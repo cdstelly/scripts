@@ -1,4 +1,4 @@
-#!/bin/bash
-git config --global user.email "cdstelly@gmail.com"
-git config --global user.name "cdstelly"
+sudo vim /etc/sysctl.conf
 
+# append
+vm.max_map_count=262144
