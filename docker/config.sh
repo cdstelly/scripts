@@ -1,4 +1,6 @@
-sudo vim /etc/sysctl.conf
+$ sudo vim /etc/sysctl.conf
 
 # append
 vm.max_map_count=262144
+
+$ sudo sysctl -p 
