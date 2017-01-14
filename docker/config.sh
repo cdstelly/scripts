@@ -11,3 +11,10 @@ $ sudo sysctl -p
 $ sudo vim /etc/default/docker
 DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4 -g /mnt/containers"
 $ sudo systemctl restart docker
+
+
+
+# bash exec shortcut
+function e()  {
+        docker exec -it $1 /bin/sh
+}
