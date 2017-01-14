@@ -29,3 +29,8 @@ b2i37rm4uxig  es-swarm_master   1/1       itzg/elasticsearch
 by4xpbigprqh  es-swarm_data     1/1       itzg/elasticsearch
 cstelly@tt:~/es-swarm>docker service scale es-swarm_data=3
 es-swarm_data scaled to 3
+
+
+# log of task
+docker logs $(docker inspect --format "{{.Status.ContainerStatus.ContainerID}}" <task_id>)
+
