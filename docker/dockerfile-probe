@@ -1,0 +1,8 @@
+# See https://hub.docker.com/r/cdstelly/probe/
+FROM ubuntu:trusty
+MAINTAINER cdstelly <cdstelly@gmail.com
+RUN apt-get update
+
+RUN apt-get install -y curl make g++ gcc netcat dnsutils
+
+CMD ["netcat", "-l", "1234"]
