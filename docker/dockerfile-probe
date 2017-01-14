@@ -6,3 +6,10 @@ RUN apt-get update
 RUN apt-get install -y curl make g++ gcc netcat dnsutils
 
 CMD ["netcat", "-l", "1234"]
+
+
+# get the container running the probe
+function gp() {
+        psid=$(docker service ls | grep probe | awk '{print $1}')
+        docker service ps $psid | awk '{print $4}' | tail -n 1
+}
