@@ -32,3 +32,7 @@ docker service create --name data --network scarfelastic -e DISCOVER_TRANSPORT_I
 docker service create --name master --network scarfelastic -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=gateway -e TYPE=MASTER -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
 
 docker service create --name gateway --network scarfelastic -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=master -e TYPE=GATEWAY -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
+
+
+#requres /home/cstelly/probemount be created on all nodes... todo: change to a network volume
+docker service create --name probe --mount type=bind,target=/data,source=/home/cstelly/probemount --network esswarm_scarfelastic cdstelly/probe
