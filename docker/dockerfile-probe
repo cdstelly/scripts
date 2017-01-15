@@ -13,3 +13,14 @@ function gp() {
         psid=$(docker service ls | grep probe | awk '{print $1}')
         docker service ps $psid | awk '{print $4}' | tail -n 1
 }
+
+# shortcut to do a shell on either the specified container, if given, or on the first one
+function e () {
+        container=$1
+        if [[ $# -eq 0 ]] ; then
+                container=$(docker ps | awk '{print $1}' | head -n 2 | tail -n 1)
+        fi
+        docker exec -it $container/bin/sh
+}
+
+
