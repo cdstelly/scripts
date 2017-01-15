@@ -27,11 +27,14 @@ docker run \
 --ulimit memlock=-1:-1  \
 itzg/elasticsearch
 
-docker service create --name data --network scarfelastic -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=master,gateway -e TYPE=DATA -e ES_JAVA_OPTS="-Xms10g -Xmx10g"  itzg/elasticsearch
+docker service create --name esswarm_data --network esswarm_scarfelastic -e PLUGINS=ingest-attachment -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=master,gateway -e TYPE=DATA -e ES_JAVA_OPTS="-Xms30g -Xmx30g"  itzg/elasticsearch
 
-docker service create --name master --network scarfelastic -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=gateway -e TYPE=MASTER -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
+docker service create --name esswarm_master --replicas 2 --network esswarm_scarfelastic -e PLUGINS=ingest-attachment -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=gateway -e TYPE=MASTER -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
 
-docker service create --name gateway --network scarfelastic -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=master -e TYPE=GATEWAY -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
+docker service create --name esswarm_gateway --network esswarm_scarfelastic -e PLUGINS=ingest-attachment -e DISCOVER_TRANSPORT_IP=eth0 -e UNICAST_HOSTS=master -e TYPE=GATEWAY -e ES_JAVA_OPTS="-Xms10g -Xmx10g"   itzg/elasticsearch
+
+docker service scale data=3
+docker service scale master=3
 
 
 #requres /home/cstelly/probemount be created on all nodes... todo: change to a network volume
