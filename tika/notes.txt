@@ -3,3 +3,14 @@ docker run -d -p 9998:9998 logicalspark/docker-tikaserver
 curl http://localhost:9998/
 time nc 127.0.0.1 9998 < hd.pdf
 curl -X PUT --data-binary @hd.pdf http://localhost:9998/tika --header "Content-type: application/pdf"
+
+
+#upload a file via passed argument: (usage: ./upload.sh myfile.pdf)
+#!/bin/bash
+DATA=$(base64 -w 0 $1)
+HOST="http://esswarm_gateway:9200/blog/post/3?pipeline=attachment&pretty"
+# echo $DATA
+curl -X POST -H "Content-Type: application/json" -d @- "$HOST" <<CURL_DATA
+{ "data": "$DATA" }
+CURL_DATA
+
