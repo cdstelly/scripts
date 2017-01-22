@@ -1,4 +1,6 @@
 logurus
 
 beego        - webapp starter kit
+montanaflynn/stats  -statistics package
 
+for updating packages: go get -u github.com/montanaflynn/stats
