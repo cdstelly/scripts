@@ -1,4 +1,5 @@
 # to compile an exe on a linux machine: 
+# while in your gopath:
 $ GOOS=windows GOARCH=386 go build -o hello.exe hello.go
 
 
