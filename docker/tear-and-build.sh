@@ -1,3 +1,4 @@
+#!/bin/bash
 docker service rm es-swarm_gateway
 docker service rm es-swarm_data
 docker service rm es-swarm_master
