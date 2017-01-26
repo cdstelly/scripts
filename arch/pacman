@@ -1,7 +1,10 @@
 
 
 List possible packages available:
-pacman -Sl archstrike
+pacman -Sl 'repoName'
+
+List packages in a group
+pacman -Sg 'groupName'
 
 Update:
 pacman -Syy
