@@ -1,0 +1,7 @@
+
+
+List possible packages available:
+pacman -Sl archstrike
+
+Update:
+pacman -Syy
