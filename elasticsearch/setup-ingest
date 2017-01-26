@@ -1,0 +1,28 @@
+Setup pipeline initially
+PUT _ingest/pipeline/attachment
+{
+  "description" : "Extract attachment information",
+  "processors" : [
+    {
+      "attachment" : {
+        "field" : "compresseddata"
+      }
+    }
+  ]
+}
+
+From <https://www.elastic.co/guide/en/elasticsearch/plugins/current/using-ingest-attachment.html> 
+
+
+Send a file to the pipeline to be ingested
+PUT my_index/my_type/my_id?pipeline=attachment
+{
+  "compresseddata": "e1xydGYxXGFuc2kNCkxvcmVtIGlwc3VtIGRvbG9yIHNpdCBhbWV0DQpccGFyIH0="
+}
+
+For example:
+PUT scarf/file/1234?pipeline=attachment
+{
+  "compresseddata": "e1xydGYxXGFuc2kNCkxvcmVtIGlwc3VtIGRvbG9yIHNpdCBhbWV0DQpccGFyIH0="
+}
+
