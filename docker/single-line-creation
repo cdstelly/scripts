@@ -39,3 +39,8 @@ docker service scale master=3
 
 #requres /home/cstelly/probemount be created on all nodes... todo: change to a network volume
 docker service create --name probe --mount type=bind,target=/data,source=/home/cstelly/probemount --network esswarm_scarfelastic cdstelly/probe
+
+
+docker service create --name esswarm_bulkextractor --network esswarm_scarfelastic trex0:5000/esswarm_bulkextractor
+docker service create --name esswarm_exif          --network esswarm_scarfelastic trex0:5000/esswarm_exif
+docker service create --name esswarm_opennsfw      --network esswarm_scarfelastic trex0:5000/esswarm_opennsfw
