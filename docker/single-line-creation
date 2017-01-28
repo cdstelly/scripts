@@ -44,3 +44,6 @@ docker service create --name probe --mount type=bind,target=/data,source=/home/c
 docker service create --name esswarm_bulkextractor --network esswarm_scarfelastic trex0:5000/esswarm_bulkextractor
 docker service create --name esswarm_exif          --network esswarm_scarfelastic trex0:5000/esswarm_exif
 docker service create --name esswarm_opennsfw      --network esswarm_scarfelastic trex0:5000/esswarm_opennsfw
+
+#usage for benchmark
+docker service create --name onswsmall --limit-cpu=16 --network benchmarking trex0:5000/esswarm_opennsfw
