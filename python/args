@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+import tika,sys
+for arg in sys.arv:
+	print arg
