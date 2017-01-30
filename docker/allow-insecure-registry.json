@@ -2,4 +2,11 @@
 
 { "insecure-registries":["trex0:5000"] }
 
+probably want to do this too: 
+{
+  "insecure-registries":["trex0:5000"],
+  "experimental": true
+}
+
+
 #followed by systemctl restart docker
