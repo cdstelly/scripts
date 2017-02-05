@@ -2,3 +2,5 @@
 import tika,sys
 for arg in sys.argv:
 	print arg
+
+
