@@ -1,0 +1,30 @@
+
+import (
+	"bufio"
+	"encoding/csv"
+	"fmt"
+	"io"
+	"os"
+)
+
+func main() {
+	f, fopenerr := os.Open("the.csv")
+
+	checkErrorPanic(fopenerr)
+	defer f.Close()
+
+	csvreader := csv.NewReader(bufio.NewReader(f))
+
+	for {
+		record, lineErr := csvreader.Read()
+		if lineErr == io.EOF {
+			//end of file
+			break
+		}
+		fmt.Println(record)
+		for value := range record {
+			fmt.Println(" %v\n", record[value])
+		}
+	}
+
+}
