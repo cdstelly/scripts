@@ -1,0 +1,6 @@
+[root@node001 node4]# ls
+docker
+[root@node001 node4]# cd docker/
+[root@node001 docker]# ls
+containers  devicemapper  image  network  plugins  swarm  tmp  trust  volumes
+[root@node001 docker]# 
