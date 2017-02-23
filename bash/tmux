@@ -8,3 +8,9 @@ ctl+"   == split horiz
 
 https://tmuxcheatsheet.com/
 https://gist.github.com/MohamedAlaa/2961058
+
+
+change the shortcut:
+~/.tmux.conf:
+
+bind-key C-a last-window
