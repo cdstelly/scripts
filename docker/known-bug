@@ -1,0 +1,9 @@
+https://github.com/irifed/softlayer-clustermanager/wiki/Resolving-docker-error:-Unknown-filesystem-type-on--dev-mapper-docker-...
+
+root@controller:/opt/softlayer-clustermanager# docker run busybox
+FATA[0000] Error response from daemon: Unknown filesystem type on /dev/mapper/docker-202:2-743198-a313557761261ef07d4e3918554fcbca25e8a663e4d3a8c255df11fedab80840-init
+
+service docker stop
+rm -rf /var/lib/docker
+for d in `dmsetup ls | grep docker | awk '{print $1}'`; do dmsetup rm $d; done
+service docker start
