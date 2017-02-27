@@ -33,4 +33,4 @@ es-swarm_data scaled to 3
 
 # log of task
 docker logs $(docker inspect --format "{{.Status.ContainerStatus.ContainerID}}" <task_id>)
-
+#cleanup
