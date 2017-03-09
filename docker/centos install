@@ -1,3 +1,7 @@
+  284  yum list installed      | grep dock
+  285  yum remove cm-docker-engine.x86_64
+  286  yum remove cm-python-docker-py.noarch  
+
 sudo yum install -y yum-utils
 sudo yum-config-manager \
     --add-repo \
