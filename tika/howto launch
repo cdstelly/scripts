@@ -1,0 +1,1 @@
+time ../tests2/tika/bin/tikatester -toolpath=/data/tests2/tika/tikasender.py
