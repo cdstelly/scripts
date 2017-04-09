@@ -1,3 +1,4 @@
+//taken from working example with docker containers
 package main
 
 import (
