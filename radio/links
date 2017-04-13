@@ -23,6 +23,8 @@ https://www.bitcraze.io/2015/06/sniffing-crazyflies-radio-with-hackrf-blue/
 
 signal analyzer: 
 https://sigrok.org/
+osx scope: 
+https://dogparksoftware.com/iSpectrum.html
 
 gps:
 https://github.com/osqzss/gps-sdr-sim
