@@ -23,4 +23,3 @@ until [ $DISKFUL -ge "90" ]; do
 
 	((foldercount+=1))
 done
-
