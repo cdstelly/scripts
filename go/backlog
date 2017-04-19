@@ -1,2 +1,4 @@
 create a proxy-logger to capture all web traffic
   save the data into ES backend
+
+generic template
