@@ -8,8 +8,6 @@ using namespace std;
 #define     SYNC_PULSE_MAX  5
 #define DECOUPLING_MASK 0b11001010 
 
-
-
 void sendZero() {
     cout << "zero" << endl;
     
@@ -18,8 +16,6 @@ void sendZero() {
 void sendOne() {
     cout << "one" << endl;
 }
-
-
 
 void transmitArray(uint8_t numBytes, uint8_t *data){
 
@@ -52,7 +48,7 @@ void transmitArray(uint8_t numBytes, uint8_t *data){
     }//end of byte
   }//end of data
 
-  // Send 3 terminatings 0's to correctly terminate the previous bit and to turn the transmitter off
+// Send 3 terminatings 0's to correctly terminate the previous bit and to turn the transmitter off
 #if SYNC_BIT_VALUE
   sendOne();
   sendOne();
@@ -66,7 +62,6 @@ void transmitArray(uint8_t numBytes, uint8_t *data){
 
 
 int main() {
-	// your code goes here
 	uint16_t data = '1';
 	uint8_t byteData[2] = {data >> 8, data & 0xFF};
 	transmitArray(2, byteData);
