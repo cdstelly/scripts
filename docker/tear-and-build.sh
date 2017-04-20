@@ -24,3 +24,27 @@ docker service scale esswarm_opennsfw=2
 
 docker service create --name scarf_consumer --network esswarm_scarfelastic trex0:5000/scarf_consumer
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Docker sucks.
