@@ -1,2 +1,4 @@
 #physical path
 pwd -P 
+
+bootable usb: http://unetbootin.github.io
