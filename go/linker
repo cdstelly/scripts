@@ -1,0 +1,5 @@
+go build -ldflags "-X main.GoratIP=31.0.1.2" client
+
+
+find all strings:
+go tool nm client 
