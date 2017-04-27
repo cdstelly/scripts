@@ -1,4 +1,5 @@
 // https://gobyexample.com/environment-variables
+
 package main
 import "os"
 import "strings"
