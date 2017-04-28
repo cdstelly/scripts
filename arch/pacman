@@ -8,3 +8,6 @@ pacman -Sg 'groupName'
 
 Update:
 pacman -Syy
+
+
+systemctl enable/disable etc
