@@ -1,5 +1,3 @@
-
-
 List possible packages available:
 pacman -Sl 'repoName'
 
