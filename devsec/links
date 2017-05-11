@@ -7,3 +7,6 @@ elf: https://jvns.ca/blog/2014/09/06/how-to-read-an-executable/
 packer - UPX, also good at hiding binaries: https://github.com/upx/upx
 
 bison tutorial: http://dinosaur.compilertools.net/bison/bison_5.html
+
+
+random news: http://defensecode.com/advisories/DC-2017-04-012_google-api-php-client_Advisory.pdf
