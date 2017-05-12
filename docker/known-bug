@@ -7,3 +7,5 @@ service docker stop
 rm -rf /var/lib/docker
 for d in `dmsetup ls | grep docker | awk '{print $1}'`; do dmsetup rm $d; done
 service docker start
+
+The known bug can be removed with 'apt remove docker'
