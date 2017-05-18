@@ -1,0 +1,17 @@
+http://www.tldp.org/LDP/abs/html/ioredirintro.html
+
+// list STDIN, STDOUT, and STDERR
+bash$ lsof -a -p $$ -d0,1,2
+COMMAND PID     USER   FD   TYPE DEVICE SIZE NODE NAME
+ bash    363 bozo        0u   CHR  136,1         3 /dev/pts/1
+ bash    363 bozo        1u   CHR  136,1         3 /dev/pts/1
+ bash    363 bozo        2u   CHR  136,1         3 /dev/pts/1
+ 
+ // exec will redirect for duration of shell
+ // exec 2> /dev/null
+bash$ lsof -a -p $$ -d0,1,2
+COMMAND PID     USER   FD   TYPE DEVICE SIZE NODE NAME
+ bash    371 bozo        0u   CHR  136,1         3 /dev/pts/1
+ bash    371 bozo        1u   CHR  136,1         3 /dev/pts/1
+ bash    371 bozo        2w   CHR    1,3       120 /dev/null
+ 
