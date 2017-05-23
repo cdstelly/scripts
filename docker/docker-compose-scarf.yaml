@@ -2,4 +2,6 @@ version: "2"
 services:
   scarf:
     image: cdstelly/scarf
-
+    
+    
+# open ports, network configs..
