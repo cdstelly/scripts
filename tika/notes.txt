@@ -14,3 +14,4 @@ curl -X POST -H "Content-Type: application/json" -d @- "$HOST" <<CURL_DATA
 { "data": "$DATA" }
 CURL_DATA
 
+-- need further performance tests.
