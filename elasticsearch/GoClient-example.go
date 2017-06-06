@@ -27,9 +27,7 @@ var (
 
 func init() {
     flag.Parse()
-
     fileInfoMapping = make(map[uint64]FileInfo)
-
     jobSubmitter = setupBulkProcessor()
 }
 
