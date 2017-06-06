@@ -46,15 +46,14 @@ type FileInfo struct {
     Filesize    uint64
     Dataruns    []DataRun
 }
+
 type DataRun struct {
     Runid         int
     Clusteroffset uint64
     Numclusters   uint64
 }
 
-
 func submitFileInfoToES(fi FileInfo) {
-
     resultIndex := elastic.NewBulkIndexRequest().
         Index("scarf").
         Type("file").
@@ -62,12 +61,10 @@ func submitFileInfoToES(fi FileInfo) {
         Doc(fi)
 
     jobSubmitter.Add(resultIndex)
-
     //  fmt.Println("Added to bulk submitter metadata for file ", resultIndex.Id, " to index ", resultIndex.Index, " jobtype ", resultIndex.Type)
 }
 
 func submitFileInfoToES(fi FileInfo) {
-
     resultIndex := elastic.NewBulkIndexRequest().
         Index("scarf").
         Type("file").
@@ -75,6 +72,5 @@ func submitFileInfoToES(fi FileInfo) {
         Doc(fi)
 
     jobSubmitter.Add(resultIndex)
-
     //  fmt.Println("Added to bulk submitter metadata for file ", resultIndex.Id, " to index ", resultIndex.Index, " jobtype ", resultIndex.Type)
 }
