@@ -8,3 +8,6 @@ book on go languae builidng
 
 
 goyacc https://godoc.org/github.com/cznic/goyacc
+
+
+map reduce : https://blog.gopheracademy.com/advent-2015/glow-map-reduce-for-golang/
