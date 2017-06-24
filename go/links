@@ -13,3 +13,5 @@ goyacc https://godoc.org/github.com/cznic/goyacc
 map reduce : https://blog.gopheracademy.com/advent-2015/glow-map-reduce-for-golang/
 
 kerberos: https://github.com/jcmturner/gokrb5
+
+machine learning: https://github.com/josephmisiti/awesome-machine-learning#go
