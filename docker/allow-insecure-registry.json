@@ -1,3 +1,4 @@
+# on the clients
 # save in /etc/docker/daemon.json
 
 { "insecure-registries":["trex0:5000"] }
