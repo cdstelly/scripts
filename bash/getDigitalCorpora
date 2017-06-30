@@ -1,0 +1,7 @@
+## grab files from https://digitalcorpora.org/corpora/files
+## get.sh 
+#!/bin/bash
+for x in $(seq -w 3 1 100)
+do
+	wget http://downloads.digitalcorpora.org/corpora/files/govdocs1/zipfiles/$x.zip
+done
