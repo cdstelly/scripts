@@ -4,5 +4,5 @@
 for x in $(seq -w 1 100)
 do
 	wget http://downloads.digitalcorpora.org/corpora/files/govdocs1/zipfiles/$x.zip
-	# rm $x.zip
+	# unzip $x.zip && rm $x.zip
 done
