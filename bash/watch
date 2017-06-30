@@ -1,0 +1,7 @@
+https://linux.die.net/man/1/watch
+
+# watch for mail 
+watch -n 60 from
+
+# watch disk usage
+watch -n10 df -h / 
