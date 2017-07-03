@@ -16,3 +16,6 @@ kerberos: https://github.com/jcmturner/gokrb5
 
 machine learning: https://github.com/josephmisiti/awesome-machine-learning#go
 specifically, ga: https://github.com/MaxHalford/gago
+
+#go compliler online, yields ASM/machine code:
+https://go.godbolt.org/
