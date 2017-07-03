@@ -45,3 +45,8 @@ Classic lessons: https://greatscottgadgets.com/sdr/9/
 SDR Radio (Windows gui - very nice): http://sdr-radio.com/v3_preview_downloads
 
 OSX Pythos Install: https://github.com/pothosware/homebrew-pothos/wiki
+
+# Automatically get NOAA images
+https://s55ma.radioamater.si/2017/07/03/automatically-receiving-noaa-images-with-rtl_fm-on-windows/
+# Get RPI to upload NOAA images to dropbox: 
+https://s55ma.radioamater.si/2017/06/28/raspberrypi-automatic-noaa-sdr-receiver-dropbox-uploader-quick-notes/
