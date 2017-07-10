@@ -1,3 +1,5 @@
+
+The known bug can be removed with 'apt remove docker'
 https://github.com/irifed/softlayer-clustermanager/wiki/Resolving-docker-error:-Unknown-filesystem-type-on--dev-mapper-docker-...
 
 root@controller:/opt/softlayer-clustermanager# docker run busybox
