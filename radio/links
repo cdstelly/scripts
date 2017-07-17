@@ -50,4 +50,7 @@ OSX Pythos Install: https://github.com/pothosware/homebrew-pothos/wiki
 # Automatically get NOAA images
 https://s55ma.radioamater.si/2017/07/03/automatically-receiving-noaa-images-with-rtl_fm-on-windows/
 # Get RPI to upload NOAA images to dropbox: 
-https://s55ma.radioamater.si/2017/06/28/raspberrypi-automatic-noaa-sdr-receiver-dropbox-uploader-quick-notes/
+https://s55ma.radioamater.si/2017/06/28/raspberrypi-automatic-noaa-sdr-receiver-dropbox-uploader-quick-notes/'
+
+#Signal Identification
+http://www.rtl-sdr.com/artemis-free-signal-identification-software/
