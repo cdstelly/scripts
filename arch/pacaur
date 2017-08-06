@@ -1,1 +1,3 @@
 use instead of pacman -- search seems better
+pacaur -s  # search
+pacaur -S  # install
