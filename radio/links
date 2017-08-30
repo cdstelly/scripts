@@ -61,3 +61,5 @@ https://www.bastibl.net/projects/       # re traffic signs, re wifi over an area
 http://www.mousejack.com/ #original mousejack 
 https://github.com/insecurityofthings/jackit.git  #mousejack firmware for nfrl24
 https://toshellandback.com/2017/08/16/mousejack/  #mousejack w open source hardawre
+
+gnuradio setup with pybombs: https://sourceforge.isae.fr/projects/ralf/wiki/UHD_and_GNURadio_installation_from_sources_with_PyBombs
