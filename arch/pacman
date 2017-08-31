@@ -7,5 +7,8 @@ pacman -Sg 'groupName'
 Update:
 pacman -Syy
 
+Check ownership of file:
+pacman -Qo <filename>
+if says none, safe to delete?
 
 systemctl enable/disable etc
