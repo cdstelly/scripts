@@ -1,0 +1,2 @@
+# todo 
+gendocker should take in the json that was made for the type description and yield the rpc code that a docker container will run
