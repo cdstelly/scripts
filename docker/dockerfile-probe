@@ -1,4 +1,5 @@
 # See https://hub.docker.com/r/cdstelly/probe/
+# look into requivalend kuernetes version
 FROM ubuntu:trusty
 MAINTAINER cdstelly <cdstelly@gmail.com
 RUN apt-get update
