@@ -51,7 +51,7 @@ extract () {
  }
  
 #History Stuff
-# don't put duplicate lines in the history or force ignoredups and ignorespace                                                                                                                                 
+# don't put duplicate lines in the history or force ignoredups and ignorespace 
 HISTCONTROL=ignoredups:ignorespace                                                                                              
 export HISTFILESIZE=20000
 export HISTSIZE=10000
